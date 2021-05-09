@@ -1,0 +1,103 @@
+@import '_variables.scss';
+
+.pulsing-dot {
+    position: absolute;
+
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        margin: -2.5px 0 0 -2.5px;
+        border-radius: 50%;
+        border: 1px solid rgba(247,139,31,0.7);
+
+        background-color: rgba(247,139,31,0.7);
+    }
+    
+    &__circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #cf1437;
+    }
+
+    .c_1 {
+        animation: pulse 3s 0s infinite;
+    }
+
+    .c_2 {
+        animation: pulse 3s 1s infinite;
+    }
+
+    .c_3 {
+        animation: pulse 3s 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            border: 1px solid rgba(239, 20, 55, 0);
+            background-color: rgba(247,139,31,1);
+            transform: scale(0);
+        }
+    
+        75% {
+            border: 1px solid rgba(239, 20, 55, .7);
+            transform: scale(1);
+            opacity: 1;
+        }
+    
+        100% {
+            border: 1px solid rgba(239, 20, 55, 0);
+            opacity: 0;
+        }
+    }
+}
+
+.dot_1 {
+    width: $dot1Size;
+    height: $dot1Size;
+    top: -15px;
+    right: 263px;
+
+    .pulsing-dot__circle {
+        width: $dot1Size;
+        height: $dot1Size;
+    }
+}
+
+.dot_2 {
+    width: $dot2Size;
+    height: $dot2Size;
+    top: 25px;
+    left: 205px;
+
+    .pulsing-dot__circle {
+        width: $dot2Size;
+        height: $dot2Size;
+    }
+}
+
+.dot_3 {
+    width: $dot3Size;
+    height: $dot3Size;
+    top: 30px;
+    right: 40px;
+
+    .pulsing-dot__circle {
+        width: $dot3Size;
+        height: $dot3Size;
+    }
+}
+
+.dot_4 {
+    width: $dot4Size;
+    height: $dot4Size;
+    top: 30px;
+    right: 383px;
+
+    .pulsing-dot__circle {
+        width: $dot4Size;
+        height: $dot4Size;
+    }
+}

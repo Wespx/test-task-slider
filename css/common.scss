@@ -1,0 +1,41 @@
+@import '_variables.scss';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	padding: 0 !important;
+	border: 0 !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container {
+    margin: 0 auto;
+}
